@@ -1,1 +1,1 @@
-DISM /Online /Cleanup-Image /RestoreHealth
+DISM /Online /Get-Packages | findstr /i "Defender Antimalware"
