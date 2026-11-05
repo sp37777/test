@@ -1,1 +1,1 @@
-DISM /Online /Get-Packages | findstr /i "Defender Antimalware"
+dism /online /enable-feature /featurename:Windows-Defender-Features /all
