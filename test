@@ -1,1 +1,3 @@
-dism /online /enable-feature /featurename:Windows-Defender-Features /all
+dism /online /get-features | find /i "defender"
+dism /online /get-packages | find /i "defender"
+sc query WinDefend
