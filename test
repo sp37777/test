@@ -1,4 +1,1 @@
-Get-ChildItem C:\Windows\WinSxS -Directory -Filter "*defender*" |
-    Select-Object -ExpandProperty Name
-
-dism /online /get-packages | findstr /i defender
+DISM /Online /Cleanup-Image /RestoreHealth
