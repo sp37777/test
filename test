@@ -1,0 +1,15 @@
+$paths = @(
+    "$env:ProgramFiles\Windows Defender\MsMpEng.exe",
+    "$env:ProgramFiles\Windows Defender\MpCmdRun.exe",
+    "$env:ProgramFiles\Windows Defender\MsASCui.exe",
+    "$env:ProgramData\Microsoft\Windows Defender"
+)
+
+$paths | ForEach-Object {
+    [PSCustomObject]@{
+        Path   = $_
+        Exists = Test-Path $_
+    }
+}
+
+dism /online /get-packages | findstr /i defender
