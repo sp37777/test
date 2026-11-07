@@ -1,3 +1,2 @@
-dism /online /get-features | find /i "defender"
-dism /online /get-packages | find /i "defender"
-sc query WinDefend
+https://github.com/aveyo/mediacreationtool.bat
+https://github.com/pbatard/Fido
